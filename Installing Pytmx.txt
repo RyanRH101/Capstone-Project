@@ -1,0 +1,8 @@
+
+PS C:\Users\Ryan\ICS4U Code> pip install pytmx
+Defaulting to user installation because normal site-packages is not writeable
+Collecting pytmx
+  Downloading PyTMX-3.32-py3-none-any.whl.metadata (1.0 kB)
+Downloading PyTMX-3.32-py3-none-any.whl (24 kB)
+Installing collected packages: pytmx
+Successfully installed pytmx-3.32

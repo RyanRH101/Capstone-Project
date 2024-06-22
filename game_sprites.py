@@ -53,7 +53,7 @@ class SpinningEnemy(pg.sprite.Sprite):
         self.directionVector = vec(0,0)
         self.last_shot = pg.time.get_ticks()
 
-        # get rid of any enemy that spawns on top of an obstacly
+        # get rid of any enemy that spawns on top of an obstacle
         obstacle = pg.sprite.spritecollideany(self, self.game.obstacles)
         colleague = pg.sprite.spritecollideany(self, self.game.enemies)
         if obstacle or colleague != self:
@@ -119,20 +119,6 @@ class SpinningEnemy(pg.sprite.Sprite):
                 self.last_shot = now
                 dir = vec(1, 0).rotate(-directionToPlayer)
                 EnemyBullet(self.game, self.pos, dir)
-
-class Obstacle(pg.sprite.Sprite):
-    def __init__(self, game, groups, x, y, w, h):
-        self.groups = game.obstacles #groups
-        pg.sprite.Sprite.__init__(self, self.groups)
-        self.isObstacle = True
-        self.isWall = False
-        self.isGround = False
-        self.game = game
-        self.rect = pg.Rect(x, y, w, h)
-        self.hit_rect = self.rect
-        self.x = x
-        self.y = y
-
 
 # Platform Guard is an enemy of player that protects the platform on which it sits.
 # Movement is limited to the horizontal platform.

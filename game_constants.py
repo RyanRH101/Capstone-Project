@@ -3,7 +3,7 @@
 import pygame as pg
 vec = pg.math.Vector2
 
-# define colorus (RGB)
+# define colours (RGB)
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
